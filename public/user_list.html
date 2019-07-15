@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body onload="getList()">
+	<div id="d1"></div>
+  <script>
+		function getList(){
+			//创建xhr对象
+			var xhr=new XMLHttpRequest();
+				//绑定监听，获取响应
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					var arr=JSON.parse(result);
+					console.log(arr);
+					var html="";
+					html+=`<table border="1px">
+									<tr>
+										<th>登录名称</th>
+										<th>电子邮箱</th>
+										<th>联系方式</th>
+										<th>用户姓名</th>
+										<th>用户性别</th>
+										<th>操作</th>
+									</tr>`;
+									for(var i=0;i<arr.length;i++){
+										//在表格中显示的性别
+										var sex="";
+										//判断数据库中的性别，1--男 0--女 null--不详
+										if(arr[i].sex==1){
+											sex="男";
+										}else if(arr[i].sex==0){
+											sex="女";
+										}else{
+											sex="不详";
+										}
+										html+=`<tr>
+														<td>${arr[i].uname}</td>
+														<td>${arr[i].email}</td>
+														<td>${arr[i].phone}</td>
+														<td>${arr[i].user_name}</td>
+														<td>${sex}</td>
+														<td><a href="javascript:delUser(${arr[i].uid})">删除</a>
+																<a href="user_update.html?uid=${arr[i].uid}">修改</a>
+														</td>
+													</tr>`;
+									}
+									html+=`</table>`;
+									d1.innerHTML=html;
+				}
+			}
+			//打开链接
+			xhr.open("get","user/list",true);
+			//发送请求
+			xhr.send(null);
+			
+		}
+		//删除当前行
+		function delUser(uid){
+			//创建xhr对象
+			var xhr=new XMLHttpRequest();
+			//绑定监听，获取响应
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					if(result==1){
+						//删除成功之后重新获取用户列表
+						alert("删除成功");
+						getList();
+					}else{
+						alert("删除失败");
+					}
+
+				}
+			}
+			//打开链接，创建请求
+			xhr.open("get","/user/deleteuser?uid="+uid,true);
+			//发送请求
+			xhr.send();
+
+    }
+		
+	</script>
+ </body>
+</html>
+
+

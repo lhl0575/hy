@@ -1,0 +1,226 @@
+body {
+    background: #f6f4f5 !important;
+    font-family: 'Microsoft YaHei';
+}
+.logoBar{
+    border-bottom: 2px solid #e60000;
+    background: #fff;
+}
+.logoBar .logoBarInner {
+    width: 1000px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.logoBar .logoBarInner .logo {
+    /* padding: 22px 0px; */
+    float: left;
+}
+.logoBar .logoBarInner h1 {
+    height: 90px;
+    overflow: hidden;
+    text-align: left;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+.logo img{
+    height:90px;
+}
+.logoBar .logoBarInner .ad {
+    padding: 27px 0px;
+    height: 36px;
+    line-height: 36px;
+    float: right;
+}
+.logoBar .logoBarInner .ad span {
+    float: left;
+    color: #1a1a1a;
+    font-size: 12px;
+    background: url(../image/promiseAd.png) no-repeat left;
+    padding-left: 49px;
+    margin-right: 33px;
+}
+.logoBar .logoBarInner .ad span.zhengban {
+    background-position: left;
+}
+.logoBar .logoBarInner .ad span.liujiu {
+    background-position: -141px center;
+}
+.logoBar .logoBarInner .ad span.yizhe {
+    background-position: -289px center;
+    margin-right: 0px;
+}
+.loginWrap {
+    
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.loginForm {
+    background: #fff;
+    padding: 60px 25px 210px;
+}
+.loginWrap .loginForm .loginTitle {
+    padding-right: 23px;
+    width: 212px;
+    overflow: hidden;
+    height: 24px;
+    line-height: 24px;
+}
+.loginWrap .loginForm .loginTitle b {
+    float: right;
+    color: #333;
+    height: 24px;
+    font-size: 22px;
+    padding-left: 13px;
+    border-left: 3px solid #e60000;
+    font-weight: bold;
+}
+.loginInputWrap {
+    margin-top: 50px;
+    overflow: hidden;
+}
+.loginInputWrap .inputItem {
+    padding-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+.loginInputWrap .labInpWr {
+    overflow: hidden;
+}
+.loginInputWrap .labInpWr .label {
+    float: left;
+    height: 42px;
+    padding-right: 23px;
+    line-height: 42px;
+    width: 212px;
+    text-align: right;
+}
+.loginInputWrap .labInpWr .label span {
+    font-size: 16px;
+    color: #333;
+}
+.loginInputWrap .labInpWr .inputWrap {
+    border-radius: 4px;
+    overflow: hidden;
+    float: left;
+    height: 40px;
+    border: 1px solid #dcdcdc;
+    width: 338px;
+    position: relative;
+}
+.loginInputWrap .labInpWr .inputWrap .inputPad {
+    padding: 10px 0;
+    display: block;
+}
+.loginInputWrap .labInpWr .inputWrap .inputBlock {
+    color: #666;
+    border: none;
+    display: block;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 10px;
+}
+input{
+    outline: 0;
+}
+.loginInputWrap .megTip {
+    /* display: none;   */
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 235px;
+    color: #666;
+}
+.loginInputWrap .loginBtn {
+    margin: 23px 0 0 235px;
+}
+.loginInputWrap .loginBtn a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    width: 380px;
+    text-align: center;
+    text-decoration: none;
+    background: #e60000;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 3px;
+}
+.loginInputWrap .otherLink {
+    margin: 25px 0 0 235px;
+    width: 380px;
+    overflow: hidden;
+    line-height: 24px;
+}
+.loginInputWrap .otherLink a {
+    color: #666a6b;
+    font-size: 14px;
+}
+.loginInputWrap .otherLink .fogotPas {
+    float: left;
+}
+.loginInputWrap .otherLink .newUserReg {
+    float: right;
+}
+.loginRegistFoot{
+    width: 1000px;
+    margin: 0 auto;
+}
+.loginRegistFoot .footNav {
+    padding-top: 46px;
+}
+.loginRegistFoot .footNav ul {
+    overflow: hidden;
+    width: 480px;
+    margin: auto;
+    list-style: none;
+}
+.loginRegistFoot .footNav ul li {
+    background: url(../image/loginRegistfootline.jpg) no-repeat right center;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    width: 120px;
+    text-align: center;
+}
+.certifica {
+    width: 1000px;
+    margin: 20px auto 30px;
+}
+.credit_certifica {
+    overflow: hidden;
+    float: left;
+    margin-left: 90px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+    outline: none
+}
+.licence {
+    float: left;
+    color: #333;
+    margin-left: 18px;
+    line-height: 20px;
+}
+.licence p a {
+    margin-right: 10px;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+	<div>
+		书名：<input type="text" id="pname"><br>
+		产品简介:<input type="text" id="details"><br>
+		作者：<input type="text" id="author"><br>
+		出版社：<input type="text" id="source_name"><br>
+		出版时间：<input type="text" id="time"><br>
+		评分: <input type="text" id="appraise"><br>
+		评论数量：<input type="text" id="appraise_count" ><br>
+		榜单类型：<input type="text" id="type"><br>
+		价格:<input type="text" id="price"><br>
+		<button onclick="add()">添加商品</button>
+	</div>
+	<script>
+		function add(){
+  	//1.创建 xhr对象	
+			var xhr=new XMLHttpRequest();
+		//4.绑定监听，接收响应
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					console.log(result);
+				}
+			}
+			//2.打开链接，创建请求
+			xhr.open("get","/product/add?pname="+pname.value+"&details="+details.value+"&author="+author.value+"&source_name="+source_name.value+"&time="+time.value+"&appraise="+appraise.value+"&appraise_count="+appraise_count.value+"&type="+type.value+"&price="+price.value);
+			//3.发送请求
+			xhr.send();
+		}
+	</script>
+
+ </body>
+</html>

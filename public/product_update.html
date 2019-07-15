@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body onload="getProduct()">
+	<div id="d1">
+		书名：<input type="text" id="pname"><br>
+		产品简介:<input type="text" id="details"><br>
+		作者：<input type="text" id="author"><br>
+		出版社：<input type="text" id="source_name"><br>
+		出版时间：<input type="text" id="time"><br>
+		评分: <input type="text" id="appraise"><br>
+		评论数量：<input type="text" id="appraise_count" ><br>
+		榜单类型：<input type="text" id="type"><br>
+		价格:<input type="text" id="price"><br>
+		<button onclick="updateProduct()">修改</button>
+		</div>
+		<script>
+			//获取前面页面传过来的pid
+		var urlParams=new URLSearchParams(location.search);
+		var pid=urlParams.get("pid");	
+		console.log(pid);
+		
+		function getProduct(){	
+			//1.创建 xhr对象
+			var xhr=new XMLHttpRequest();
+			//4.绑定监听，接收响应
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					
+					var product=JSON.parse(result);
+							console.log(product);
+					pname.value=product[0].pname;
+					details.value=product[0].details;
+					author.value=product[0].author;
+					source_name.value=product[0].source_name;
+					time.value=product[0].time;
+					appraise.value=product[0].appraise;
+					appraise_count.value=product[0].appraise_count;
+					type.value=product[0].type;
+					price.value=product[0].price;
+					
+				}
+			}
+			//2.打开链接，创建请求
+			xhr.open("get","/product/getproduct?pid="+pid,true);
+			//3.发送请求
+			xhr.send(null);
+		}
+
+		function updateProduct(){
+			//1.创建 xhr对象
+			var xhr=new XMLHttpRequest();
+			//4.绑定监听，接收响应
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;	
+					if(result=="1"){
+						alert('修改成功');
+						location.href="http://localhost:8080/product_list.html";
+					}
+				}
+			}
+			//2.打开链接，创建请求
+			xhr.open("get","/product/update?pname="+pname.value+"&details="+details.value+"&author="+author.value+"&source_name="+source_name.value+"&time="+time.value+"&appraise="+appraise.value+"&appraise_count="+appraise_count.value+"&type="+type.value+"&price="+price.value+"&pid="+pid,true);
+			//3.发送请求
+			xhr.send();
+		}
+		</script>
+ </body>
+</html>

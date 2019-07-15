@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+		<div>
+			用户名：<input type="text" id="uname" onblur="uname_blur()" placeholder="请输入用户名"><br>
+		</div>
+		<div id="d1"></div>
+		<div>
+			密码：<input type="password" id="upwd" placeholder="请输入密码"><br>
+		</div>
+		<button onclick="login()">登录</button>
+		<script>
+			function login(){
+				//1.创建xhr对象
+				var xhr=new XMLHttpRequest();
+				//4.绑定监听 获取响应
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4&&xhr.status==200){
+						var result=xhr.responseText;
+						console.log(result);
+					}
+				}
+				//2.创建请求
+				xhr.open("post","user/login",true);
+				//3.发送请求
+				//修改请求头
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				var formdata="uname="+uname.value+"&upwd="+upwd.value;
+
+				xhr.send(formdata);
+			}
+			function uname_blur(){
+				if(uname.value==""){
+						d1.innerHTML="用户名不能为空";
+				}
+			}
+		</script>
+	
+ </body>
+</html>

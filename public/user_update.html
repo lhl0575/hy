@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body onload="getUser()">
+  
+	<div id="d1">
+		用户名称：<input type="text" id="uname"><br>
+		用户密码：<input type="password" id="upwd"><br>
+		联系方式：<input type="text" id="phone"><br>
+		用户邮箱：<input type="text" id="email"><br>
+		真实姓名：<input type="text" id="user_name"><br>
+		用户性别：<input type="radio" id="g_man" name="sex" value="1" checked=false>男
+		<input type="radio" id="g_woman" name="sex" value="0" checked=false>女
+	</div>
+	<button onclick="updateUser()">修改</button>
+
+	<script>
+		//获取前面页面传过来的uid
+		var urlParams=new URLSearchParams(location.search);
+		var uid=urlParams.get("uid");	
+		
+		function getUser(){	
+			//1.创建 xhr对象
+			var xhr=new XMLHttpRequest();
+			//4.绑定监听，接收响应
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					
+					var user=JSON.parse(result);
+							console.log(user);
+					uname.value=user[0].uname;
+					upwd.value=user[0].upwd;
+					phone.value=user[0].phone;
+					email.value=user[0].email;
+					user_name.value=user[0].user_name;
+					var sex=user[0].sex;
+					if(sex==1){
+						g_man.checked=true;
+					}else if(sex==0){
+						g_woman.checked==true;
+					}
+					
+				}
+			}
+			//2.打开链接，创建请求
+			xhr.open("get","/user/getuser?uid="+uid,true);
+			//3.发送请求
+			xhr.send(null);
+		}
+
+		function updateUser(){
+			//1.创建 xhr对象
+			var xhr=new XMLHttpRequest();
+			//4.绑定监听，接收响应
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;	
+					if(result=="1"){
+						alert('修改成功');
+						location.href="http://localhost:8080/user_list.html";
+					}
+				}
+			}
+			//2.打开链接，创建请求
+			xhr.open("post","/user/updateuser",true);
+			//设置请求消息头，修改接收所有字符
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var sex="";
+					if(g_man.checked){
+						sex=g_man.value;
+					}else if(g_woman.checked){
+						sex=g_woman.value;
+					}
+			var formdata="uname="+uname.value+"&upwd="+upwd.value+"&phone="+phone.value+"&email="+email.value+"&user_name="+user_name.value+"&sex="+sex+"&uid="+uid;
+			//3.发送请求
+			xhr.send(formdata);
+		}
+	</script>
+ </body>
+</html>
+

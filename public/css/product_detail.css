@@ -1,0 +1,653 @@
+
+.nav{
+    border-bottom:2px solid #e60000;
+    height:42px;
+    background: transparent;
+    width:1200px;
+    margin: 0 auto;
+    margin-bottom: 9px;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+ul{
+    list-style: none;
+}
+.nav ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.nav ul li a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 26px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+}
+.nav ul li a:hover{
+    color:red;
+}
+.bookInfoWrap{
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.bookInfoWrap .bookDetailWrap{
+    width: 940px;
+    display: flex;
+}
+.bookInfoWrap .bookDetailWrap .bookImage{
+    margin-right: 20px;
+    padding-bottom: 16px;
+    width: 350px;
+    padding:25px;
+    box-sizing: border-box;
+    border:1px solid #dbdbdb;
+}
+.bookImage .img img{
+    max-height: 300px;
+}
+.bookInfo{
+    width:570px;
+}
+.bookDetail{
+    padding-left: 10px;
+}
+.bookInfo .bookDetail h3{
+    line-height: 24px;
+    margin-top: 7px;
+    font-family: 'Microsoft YaHei';
+    font-size: 18px;
+    color: #333333;
+}
+.bookInfo .recomand {
+    line-height: 24px;
+    color: #e60000;
+    margin-top: 7px;
+    overflow: hidden;
+}
+.bookInfo .author {
+    overflow: hidden;
+    line-height: 24px;
+    margin-top: 7px;
+}
+.bookInfo .author span,.bookInfo .publisher span,.bookInfo .publishTime span,.bookInfo .otherinfo span {   
+    color: #666;
+}
+.bookInfo .publisher,.bookInfo .publishTime,.bookInfo .otherinfo  {
+    overflow: hidden;
+    line-height: 24px;
+    margin-top: 3px;
+}
+.bookInfo .priceWrap {
+    margin-top: 15px;
+    background: #fff4f8;
+    padding: 10px 0 10px 10px;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.bookInfo .priceWrap .sellPriceTit {
+    color: #666;
+}
+.bookInfo .priceWrap .sellPrice {
+    color: #e60000;
+    font-size: 18px;
+    font-family: 'Microsoft YaHei';
+    margin-left: 10px;
+}
+.bookInfo .priceWrap .discount {
+    color: #666666;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.bookInfo .priceWrap .price {
+    color: #999999;
+    margin-left: 30px;
+    margin-top: 3px;
+}
+.bookInfo .priceWrap del{
+    color: #999999;
+    margin-top: 3px;
+}
+.bookInfo .oparateButton {
+    padding: 15px 0 10px;
+}
+.bookInfo .oparateButton a {
+    float: left;
+    height: 35px;
+    margin-right: 10px;
+}
+.bookInfo .oparateButton .buyButton {
+    width: 160px;
+    line-height: 32px;
+    text-indent: 45px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+    background: url(../image/childredSprit.png) no-repeat -335px -262px;
+    text-decoration: none;
+}
+.bookInfo .oparateButton .buyButton:hover {
+    background: url(../image/childredSprit.png) no-repeat -335px -302px;
+}
+.bookInfo .oparateButton .collectBtn {
+    border: 1px solid #e60000;
+    border-radius: 5px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    width: 88px;
+    line-height: 32px;
+    color: #e60000;
+    text-decoration: none;
+}
+.bookInfoWrap .fiveStartWrap {
+    
+    width: 230px;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart {
+    border: 1px solid #eaeaea;
+}
+.fiveStart .fiveStartTit {
+    background: #f3f3f3;
+    height: 53px;
+    overflow: hidden;
+    border-bottom: 1px solid #e9e9e9;
+    
+}
+.bookInfoWrap .fiveStartWrap .fiveStart .fiveStartTit span {
+    float: left;
+    color: #333;
+    font-size: 16px;
+    height: 53px;
+    line-height: 52px;
+    margin-left: 15px;
+    font-family: 'Microsoft YaHei';
+}
+.bookInfoWrap .fiveStartWrap .fiveStart .fiveStartCon {
+    height: 296px;
+    overflow: hidden;
+}
+ul{list-style: none}
+em, i, strong, b {
+    font-style: normal;
+    font-weight: 400;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li {
+    position: relative;
+    border-bottom: 1px solid #eaeaea;
+    padding-left: 10px;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li.cur em {
+    display: none;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li em {
+    position: absolute;
+    width: 4px;
+    height: 6px;
+    right: 10px;
+    text-indent: -999px;
+    overflow: hidden;
+    top: 13px;
+    background: url(../image/childredSprit.png) no-repeat 0 -343px;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li.cur p {
+    display: none;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li p {
+    height: 32px;
+    line-height: 32px;
+    color: #333333;
+    padding-right: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur {
+    overflow: hidden;
+    display: none;
+    padding: 6px 0;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li.cur .bookCur {
+    display: block;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bpic {
+    margin-right: 5px;
+    float: left;
+    width: 85px;
+    height: 85px;
+    text-align: center;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bpic img {
+    max-width: 85px;
+    max-height: 85px;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bDetai {
+    float: left;
+    width: 110px;
+    overflow: hidden;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bDetai .bName {
+    margin-top: 8px;
+    line-height: 14px;
+    height: 28px;
+    overflow: hidden;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bDetai .startWrap {
+    overflow: hidden;
+    height: 21px;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bDetai .startWrap i {
+    float: left;
+    background: url(../image/homeindex.png) no-repeat -17px -386px;
+    height: 13px;
+    width: 13px;
+    margin: 4px 3px 0 0;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bDetai i.one {
+    background-position: 0px -386px;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bPrice {
+    overflow: hidden;
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bPrice .sellPrice {
+    float: left;
+    color: #e60000;
+    font-family: "Microsoft YaHei";
+}
+.bookInfoWrap .fiveStartWrap .fiveStart ul li .bookCur .bPrice .price {
+    float: left;
+    color: #999999;
+    text-decoration-line: line-through;
+    font-family: "Microsoft YaHei";
+    margin-left: 7px;
+}
+.bookMainCon{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.bookLeft{
+    width: 200px;
+}
+.bookLeft .userRec {
+    border: 1px solid #e9e9e9;
+}
+.bookLeft  .tith2 {
+    height: 53px;
+    line-height: 53px;
+    border-bottom: 1px solid #e9e9e9;
+    background: #f3f3f3;
+    text-indent: 15px;
+    color: #333333;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+    font-weight: normal;
+}
+.bookLeft .userRec ul li.cur {
+    padding-bottom: 4px;
+}
+.bookLeft .userRec ul li {
+    border-bottom: 1px solid #e6e6e6;
+    position: relative;
+}
+.bookLeft .userRec ul li.cur em {
+    display: none;
+}
+.bookLeft .userRec ul li em {
+    position: absolute;
+    width: 4px;
+    height: 6px;
+    right: 10px;
+    text-indent: -999px;
+    overflow: hidden;
+    top: 13px;
+    background: url(../image/childredSprit.png) no-repeat 0 -343px;
+}
+.bookLeft .userRec ul li.cur p {
+    display: none;
+}
+.bookLeft .userRec ul li p {
+    text-indent: 10px;
+    height: 32px;
+    line-height: 32px;
+    color: #333333;
+    padding-right: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.bookLeft .userRec ul li.cur .cover {
+    display: block;
+}
+.bookLeft .userRec ul li .cover {
+    padding: 15px 20px 10px;
+    text-align: center;
+    height: 158px;
+    display: none;
+}
+.bookLeft .userRec ul li .cover a img {
+    max-height: 158px;
+    max-width: 158px;
+}
+.bookLeft .userRec ul li.cur .infor {
+    display: block;
+}
+.bookLeft .userRec ul li .infor {
+    padding: 0 10px;
+    display: none;
+}
+.bookLeft .userRec ul li .infor .name {
+    height: 22px;
+    overflow: hidden;
+    line-height: 22px;
+    font-weight: normal;
+}
+.bookLeft .userRec ul li .infor .author {
+    height: 22px;
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bookLeft .userRec ul li .infor .author span {
+    color: #666666;
+}
+.bookLeft .userRec ul li .infor .priceWrap {
+    overflow: hidden;
+    height: 25px;
+    line-height: 25px;
+}
+.bookLeft .userRec ul li .infor .priceWrap .sellPrice {
+    float: left;
+    color: #e60000;
+    font-size: 15px;
+    font-family: 'Microsoft YaHei';
+    margin-right: 6px;
+}
+.bookLeft .userRec ul li .infor .priceWrap .price {
+    float: left;
+    color: #999;
+    font-family: 'Microsoft YaHei';
+}
+.bookLeft .hotBook {
+    border: 1px solid #e9e9e9;
+    margin-top: 20px;
+}
+.bookLeft .hotBook ul {
+    padding: 0px 10px;
+}
+.bookLeft .hotBook ul li {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 4px;
+}
+.bookLeft .hotBook ul li .cover {
+    padding: 15px 10px 10px;
+    height: 158px;
+    text-align: center;
+}
+.bookLeft .hotBook ul li .cover a img {
+    max-height: 158px;
+    max-width: 158px;
+}
+.bookLeft .hotBook ul li .infor .name {
+    height: 22px;
+    overflow: hidden;
+    line-height: 22px;
+    font-weight: normal;
+}
+.bookLeft .hotBook ul li .infor .name:hover {
+    color: #e60000;
+}
+.bookLeft .hotBook ul li .infor .author {
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+}
+.bookLeft .hotBook ul li .infor .author span {
+    color: #666666;
+}
+.bookLeft .hotBook ul li .infor .priceWrap {
+    overflow: hidden;
+    height: 25px;
+    line-height: 25px;
+}
+.bookLeft .hotBook ul li .infor .priceWrap .sellPrice {
+    float: left;
+    color: #e60000;
+    font-size: 15px;
+    font-family: 'Microsoft YaHei';
+    margin-right: 6px;
+}
+.bookLeft .hotBook ul li .infor .priceWrap .price {
+    float: left;
+    color: #999;
+    font-family: 'Microsoft YaHei';
+}
+.bookRight{
+    width:980px;
+
+}
+.bookRight .tabtit{
+    background-color: #fff;
+    width: 100%;
+    height: 55px;
+}
+.bookRight .tabtit p{
+    width: 180px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    background: #3b3b3b;
+    font-size: 15px;
+    color:#fff;
+}
+.guanggao{
+    margin: 10px 0;
+}
+.tabBookDetail .specialist h2.tit{
+    overflow: hidden;
+}
+.tabBookDetail .specialist h2.tit span{
+    float: left;
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+    height: 32px;
+    border: 1px solid #e9e9e9;
+    background: #f5f5f5;
+    font-weight: normal;
+    text-align: center;
+    line-height: 32px;
+    padding: 0 10px;
+
+}
+.tabBookDetail .specialist p{
+    line-height: 24px;
+    color: #666666;
+    font-size: 14px;
+    padding: 15px 25px 0px 22px;
+}
+.tabBookDetail .brief {
+    margin-top: 25px;
+}
+.tabBookDetail h2.tit {
+    overflow: hidden;
+}
+.tabBookDetail h2.tit span {
+    float: left;
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+    height: 32px;
+    border: 1px solid #e9e9e9;
+    background: #f5f5f5;
+    font-weight: normal;
+    text-align: center;
+    line-height: 32px;
+    padding: 0 10px;
+}
+.tabBookDetail .brief p {
+    line-height: 24px;
+    color: #666666;
+    font-size: 14px;
+    padding: 15px 25px 0px 22px;
+}
+.tabBookDetail .excerpt {
+    margin-top: 25px;
+}
+.tabBookDetail .excerpt p {
+    line-height: 24px;
+    color: #666666;
+    font-size: 14px;
+    padding: 15px 25px 0px 22px;
+}
+.tabookReco {
+    margin-top: 20px;
+}
+.tabookReco .tabookRecoTit {
+    background: #f5f5f5;
+    border: 1px solid #e9e9e9;
+    height: 53px;
+    overflow: hidden;
+}
+.tabookReco .tabookRecoTit .tit {
+    float: left;
+    height: 53px;
+    line-height: 53px;
+    padding-left: 20px;
+}
+.tabookReco .tabookRecoTit .tit span {
+    color: #333;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+}
+.tabookReco .tabookRecoCon .noneReco {
+    text-align: center;
+    line-height: 118px;
+}
+.tabookReco .tabookRecoCon .noneReco span {
+    color: #666666;
+    font-size: 14px;
+}
+.siteHot{
+    width: 1212px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.siteHot .siteHotTitle {
+    height: 47px;
+    background: #e1f7ff;
+    border-bottom: 3px solid #07bafd;
+    line-height: 47px;
+    width: 1200px;
+    margin: auto;
+}
+.siteHot .siteHotTitle .tith2 {
+    text-indent: 18px;
+    font-size: 22px;
+    font-weight: normal;
+    color: #333;
+    font-family: 'Microsoft YaHei';
+}
+.siteHot .siteHotCon{
+    overflow: hidden;
+}
+.siteHot .siteHotCon ul {
+    overflow: hidden;
+    width: 1212px;
+}
+.siteHot .siteHotCon ul li {
+    float: left;
+    height: 291px;
+    width: 186px;
+    border: 2px solid #fff;
+    margin: 10px 6px 0;
+}
+.siteHot .siteHotCon ul li .bookCover {
+    height: 158px;
+    margin-top: 10px;
+    text-align: center;
+}
+.siteHot .siteHotCon ul li .bookCover a img {
+    max-height: 158px;
+    max-width: 158px;
+}
+.siteHot .siteHotCon ul li .bookName {
+    width: 150px;
+    padding: 0 20px;
+    line-height: 18px;
+    height: 18px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.siteHot .siteHotCon ul li .bookName span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    
+}
+.siteHot .siteHotCon ul li .bookAuthor {
+    margin-top: 2px;
+    color: #666;
+    width: 150px;
+    padding: 0 20px;
+    line-height: 18px;
+    height: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.siteHot .siteHotCon ul li .priceWrap {
+    margin-top: 4px;
+    width: 150px;
+    padding: 0 20px;
+    overflow: hidden;
+    line-height: 16px;
+}
+.siteHot .siteHotCon ul li .priceWrap .salePrice {
+    float: left;
+    color: #e60000;
+    font-size: 15px;
+    font-family: "Microsoft YaHei";
+}
+.siteHot .siteHotCon ul li .priceWrap .price {
+    line-height: 18px;
+    margin-left: 7px;
+    float: left;
+    color: #999999;
+    text-decoration-line: line-through;
+}
+.siteHot .siteHotCon ul li .buyButton {
+    margin-top: 6px;
+    overflow: hidden;
+}
+.siteHot .siteHotCon ul li .buyButton a {
+    margin: 2px auto 0;
+    display: block;
+    width: 158px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    background: #e1f7ff;
+    color: #666666;
+    text-decoration: none;
+}
+.siteHot .siteHotCon ul li .buyButton a:hover {
+    background: #e60000;
+    color: #ffffff;
+    line-height: 28px;
+}
+

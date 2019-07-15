@@ -1,0 +1,10 @@
+*{margin: 0;padding: 0;}
+body{background: #fff;
+    font-size: 12px;
+    font-family: "宋体";
+}
+.my_font{font-size: 14px;}
+em, i, strong, b {
+    font-style: normal;
+    font-weight: 400;
+}
